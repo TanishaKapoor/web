@@ -1,0 +1,14 @@
+<!-- <div >
+  {{batch.name}}
+  {{batch.courseId}}
+</div> -->
+<table style="border:solid">
+    <tr>
+      <th>Name</th>
+      <th>Course Id</th>
+    </tr>
+    <tr *ngFor="let batch of batchList">
+      <td>{{batch.name}}</td>
+      <td>{{batch.courseId}}</td>
+    </tr>
+</table>

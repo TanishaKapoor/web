@@ -1,0 +1,15 @@
+<p>
+  {{pageTitle}}
+</p>
+<input type="text" placeholder="Student Name" #name>
+<button (click)="send(name.value)">ADD</button><p></p>
+ <div *ngFor="let student of StudentList;let u = index">
+ {{student.name}}
+ <button (click)="toggle(u)">DETAILS</button>
+ <div *ngIf="wantbatch && studentId==u">
+   Batch Ids are from 1 to {{totalBatches}}<p></p>
+   <input type="text" placeholder="Batch Id" #batch>
+   <button (click)="addtobatch(batch.value)">ADD</button>
+ </div>
+</div> 
+
